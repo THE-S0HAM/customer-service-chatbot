@@ -17,4 +17,8 @@ public class ChatController {
     public ChatResponse chat(@RequestBody ChatRequest chatRequest) {
         return chatService.processQuery(chatRequest);
     }
+    public void setChatService(ChatService chatService) {
+    this.chatService = chatService;
+}
+
 }
