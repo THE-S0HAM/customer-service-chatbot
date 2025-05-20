@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mindease.controller.MainController">
+   <top>
+      <VBox styleClass="header">
+         <children>
+            <Label styleClass="header-title" text="MindEase" />
+            <Label styleClass="header-subtitle" text="Mental Health &amp; Wellness Companion" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dashboard">
+            <content>
+              <fx:include source="dashboard.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Mood Tracker">
+            <content>
+              <fx:include source="mood_tracker.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Journal">
+            <content>
+              <fx:include source="journal.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Thought Reframing">
+            <content>
+              <fx:include source="cbt.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Meditation">
+            <content>
+              <fx:include source="meditation.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Goals">
+            <content>
+              <fx:include source="goals.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Chat">
+            <content>
+              <fx:include source="chat.fxml" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <HBox styleClass="footer" alignment="CENTER_RIGHT">
+         <children>
+            <Label styleClass="footer-text" text="MindEase v1.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

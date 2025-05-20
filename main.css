@@ -1,0 +1,207 @@
+/* Main stylesheet for MindEase application */
+
+/* Root styles */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Header styles */
+.header {
+    -fx-background-color: #6a1b9a;
+    -fx-padding: 15px;
+}
+
+.header-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.header-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+}
+
+/* Tab styles */
+.tab-pane {
+    -fx-tab-min-width: 100px;
+}
+
+.tab {
+    -fx-background-color: #e1bee7;
+    -fx-background-insets: 0 1 0 1;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.tab:selected {
+    -fx-background-color: #9c27b0;
+}
+
+.tab-label {
+    -fx-text-fill: #424242;
+    -fx-font-weight: normal;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Content area styles */
+.content-area {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-background-radius: 0 0 5 5;
+}
+
+/* Form styles */
+.form-container {
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+}
+
+.form-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.form-field {
+    -fx-pref-width: 300px;
+}
+
+.form-label {
+    -fx-font-weight: bold;
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #9c27b0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+}
+
+.button:hover {
+    -fx-background-color: #7b1fa2;
+}
+
+.button:pressed {
+    -fx-background-color: #6a1b9a;
+}
+
+.button-secondary {
+    -fx-background-color: #e1bee7;
+    -fx-text-fill: #424242;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #ce93d8;
+}
+
+/* Card styles */
+.card {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+}
+
+/* Mood tracker styles */
+.mood-button {
+    -fx-min-width: 80px;
+    -fx-min-height: 80px;
+    -fx-background-radius: 40px;
+    -fx-content-display: top;
+    -fx-padding: 10px;
+}
+
+.mood-happy {
+    -fx-background-color: #ffeb3b;
+}
+
+.mood-sad {
+    -fx-background-color: #90caf9;
+}
+
+.mood-anxious {
+    -fx-background-color: #ffcc80;
+}
+
+.mood-angry {
+    -fx-background-color: #ef9a9a;
+}
+
+/* Journal styles */
+.journal-entry {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.journal-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.journal-date {
+    -fx-font-style: italic;
+    -fx-font-size: 12px;
+    -fx-text-fill: #757575;
+}
+
+/* Chat styles */
+.chat-bubble {
+    -fx-padding: 10px;
+    -fx-background-radius: 20px;
+}
+
+.chat-bubble-user {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+}
+
+.chat-bubble-bot {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #212121;
+}
+
+/* Meditation styles */
+.breathing-canvas {
+    -fx-background-color: #e8f5e9;
+    -fx-background-radius: 10px;
+}
+
+/* Goal tracker styles */
+.goal-progress-bar {
+    -fx-pref-height: 15px;
+}
+
+.goal-progress-bar .bar {
+    -fx-background-color: #4caf50;
+}
+
+.goal-complete {
+    -fx-text-fill: #4caf50;
+    -fx-font-weight: bold;
+}
+
+/* Footer styles */
+.footer {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.footer-text {
+    -fx-text-fill: #757575;
+    -fx-font-size: 12px;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="content-area" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mindease.controller.CBTController">
+   <center>
+      <HBox spacing="20.0">
+         <children>
+            <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="form-title" text="CBT Thought Reframing Tool">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Step 1: Describe the situation" />
+                  <TextField fx:id="situationField" promptText="What happened? Where? When? Who was involved?" />
+                  <Label text="Step 2: Identify your automatic thought" />
+                  <TextArea fx:id="thoughtArea" prefHeight="80.0" promptText="What went through your mind?" wrapText="true" />
+                  <Label text="Step 3: Identify emotions and intensity" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <TextField fx:id="emotionsField" promptText="What emotions did you feel?" HBox.hgrow="ALWAYS" />
+                        <Label text="Intensity (1-10)" />
+                        <Slider fx:id="intensitySlider" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" />
+                     </children>
+                  </HBox>
+                  <Label text="Step 4: Evidence supporting the thought" />
+                  <TextArea fx:id="evidenceForArea" prefHeight="80.0" promptText="What facts support this thought?" wrapText="true" />
+                  <Label text="Step 5: Evidence against the thought" />
+                  <TextArea fx:id="evidenceAgainstArea" prefHeight="80.0" promptText="What facts contradict this thought?" wrapText="true" />
+                  <Label text="Step 6: Alternative balanced thought" />
+                  <TextArea fx:id="alternativeThoughtArea" prefHeight="80.0" promptText="What's a more balanced perspective?" wrapText="true" />
+                  <Label text="Step 7: Outcome" />
+                  <TextArea fx:id="outcomeArea" prefHeight="80.0" promptText="How do you feel now? What did you learn?" wrapText="true" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="New emotion intensity (1-10)" />
+                        <Slider fx:id="newIntensitySlider" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#handleSaveRecord" text="Save Thought Record" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Previous Thought Records" />
+                  <ListView fx:id="recordsListView" onMouseClicked="#handleRecordSelection" prefHeight="400.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

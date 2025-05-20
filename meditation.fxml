@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="content-area" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mindease.controller.MeditationController">
+   <center>
+      <VBox spacing="20.0">
+         <children>
+            <Label styleClass="form-title" text="Meditation &amp; Breathing Assistant">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox spacing="20.0">
+               <children>
+                  <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Exercise Type" />
+                        <ComboBox fx:id="exerciseComboBox" prefWidth="200.0" promptText="Select exercise type" />
+                        <Label text="Duration (minutes)" />
+                        <Slider fx:id="durationSlider" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="5.0" />
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleStart" text="Start" />
+                              <Button fx:id="stopButton" mnemonicParsing="false" onAction="#handleStop" text="Stop" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="timerLabel" alignment="CENTER" text="00:00" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="10.0" styleClass="card" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Follow the circle to guide your breathing" />
+                        <Canvas fx:id="breathingCanvas" height="300.0" styleClass="breathing-canvas" width="300.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

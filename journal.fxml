@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="content-area" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mindease.controller.JournalController">
+   <center>
+      <HBox spacing="20.0">
+         <children>
+            <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="form-title" text="Guided Journaling">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Journal Prompt (Optional)" />
+                  <ComboBox fx:id="promptComboBox" prefWidth="400.0" promptText="Select a prompt or write freely" />
+                  <Label text="Title" />
+                  <TextField fx:id="titleField" promptText="Give your entry a title" />
+                  <Label text="Journal Entry" />
+                  <TextArea fx:id="contentArea" prefHeight="250.0" promptText="Write your thoughts here..." wrapText="true" />
+                  <HBox alignment="CENTER_LEFT" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleSaveEntry" text="Save Entry" />
+                        <Label fx:id="sentimentLabel" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Previous Entries" />
+                  <ListView fx:id="entriesListView" onMouseClicked="#handleEntrySelection" prefHeight="400.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>
